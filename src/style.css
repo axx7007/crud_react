@@ -1,0 +1,22 @@
+.map {
+  display: flex;
+  width: 1000px;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+.map > .text {
+  font-size: 16px;
+}
+.inputwrapper {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.inputwrapper > .forma {
+  width: 250px;
+  height: 25px;
+}
+.AddBtn {
+  width: 55px;
+}
