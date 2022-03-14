@@ -44,7 +44,7 @@ class State extends React.Component {
     };
     const Add = (e) => {
       if (
-        this.state.name.length &&
+        this.state.nsme.length &&
         this.state.surname.length &&
         this.state.age.length &&
         this.state.id.length
@@ -115,8 +115,10 @@ class State extends React.Component {
                 {value.surname} Age: {value.age}
               </h5>
               <div className="btn-wrapper">
-                {this.state.selected.id === value.id ? (
-                  <button onClick={() => onEdit(value)}>Cancel</button>
+                {this.state.selected?.id === value.id ? (
+                  <button onClick={() => this.setState({ selected: null })}>
+                    Cancel
+                  </button>
                 ) : (
                   <button onClick={() => onEdit(value)}>Edit</button>
                 )}
