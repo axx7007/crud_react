@@ -69,7 +69,20 @@ class State extends React.Component {
     };
     const onEdit = (val) => {
       this.setState({ selected: val });
-      console.log(this.state.selected.id === val.id);
+    };
+    const onEditChange = ({ target }) => {
+      const { name, value } = target;
+      this.setState({ selected: { ...this.state.selected, [name]: value } });
+    };
+    const onSave = () => {
+      var res = this.state.data.map((value) =>
+        value.id === this.state.selected.id ? this.state.selected : value
+      );
+      console.log(res);
+      this.setState({
+        data: res,
+        selected: null,
+      });
     };
     return (
       <div className="wrapper">
@@ -111,14 +124,46 @@ class State extends React.Component {
           return (
             <div key={value.id} className="container">
               <h5>
-                {value.id}-Name: {value.name} Surname:
-                {value.surname} Age: {value.age}
+                {value.id}-
+                {this.state.selected?.id === value.id ? (
+                  <>
+                    <input
+                      onChange={onEditChange}
+                      name="name"
+                      type="text"
+                      value={this.state.selected?.name}
+                      placeholder="name"
+                    />
+                    <input
+                      onChange={onEditChange}
+                      name="surname"
+                      type="text"
+                      value={this.state.selected?.surname}
+                      placeholder="surname"
+                    />
+                    <input
+                      onChange={onEditChange}
+                      name="age"
+                      type="text"
+                      value={this.state.selected?.age}
+                      placeholder="age"
+                    />
+                  </>
+                ) : (
+                  <>
+                    Name {value.name} ' ' Surname:{value.surname} ' ' Age:{" "}
+                    {value.age}
+                  </>
+                )}
               </h5>
               <div className="btn-wrapper">
                 {this.state.selected?.id === value.id ? (
-                  <button onClick={() => this.setState({ selected: null })}>
-                    Cancel
-                  </button>
+                  <>
+                    <button onClick={onSave}>Save</button>
+                    <button onClick={() => this.setState({ selected: null })}>
+                      Cancel
+                    </button>
+                  </>
                 ) : (
                   <button onClick={() => onEdit(value)}>Edit</button>
                 )}
