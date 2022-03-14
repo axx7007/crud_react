@@ -1,0 +1,133 @@
+.container {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  border: 1px solid black;
+  display: flex;
+  margin-top: 30px;
+}
+.wrapper > .id {
+  flex: 1;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper > .name {
+  flex: 4;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper > .surname {
+  flex: 4;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper > .age {
+  flex: 1;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper > .edit {
+  flex: 1;
+  /* border: 1px solid black; */
+}
+.wrapper > .delete {
+  flex: 1;
+  /* border: 1px solid black; */
+}
+.btnEdit {
+  width: 100%;
+  height: 100%;
+}
+.btnDelete {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 81%, 51%);
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  /* font-size: 18px; */
+  border: none;
+  font-weight: 900;
+}
+.btnDelete:hover {
+  transform: scale(1.1);
+}
+.header {
+  display: flex;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.header > .add {
+  flex: 8;
+  display: flex;
+  justify-content: space-between;
+}
+.input {
+  flex: 1;
+  height: 30px;
+}
+.header > .search {
+  flex: 4;
+}
+.header > .search {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.inputSearch {
+  width: 60%;
+}
+
+.btns {
+  flex: 1;
+}
+.editbtn {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  border: none;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 900;
+}
+.editbtn:hover {
+  transform: scale(1.1);
+}
+
+.editname {
+  width: 70%;
+  height: 30px;
+}
+.editsurname {
+  width: 70%;
+  height: 30px;
+}
+.editage {
+  width: 80%;
+  height: 30px;
+}
+.cancelbtn {
+  width: 100%;
+  height: 100%;
+  background-color: #28e617;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 900;
+}
+.cancelbtn:hover {
+  transform: scale(1.1);
+}

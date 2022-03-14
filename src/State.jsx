@@ -158,12 +158,9 @@ class State extends React.Component {
               </h5>
               <div className="btn-wrapper">
                 {this.state.selected?.id === value.id ? (
-                  <>
-                    <button onClick={onSave}>Save</button>
-                    <button onClick={() => this.setState({ selected: null })}>
-                      Cancel
-                    </button>
-                  </>
+                  <button onClick={() => this.setState({ selected: null })}>
+                    Cancel
+                  </button>
                 ) : (
                   <button onClick={() => onEdit(value)}>Edit</button>
                 )}

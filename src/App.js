@@ -6,8 +6,8 @@ import State1 from './State1';
 function App() {
   return (
     <div className="App">
-      <State />
-      {/* <State1 /> */}
+      {/* <State /> */}
+      <State1 />
     </div>
   );
 }
